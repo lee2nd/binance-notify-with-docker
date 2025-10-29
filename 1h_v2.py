@@ -86,9 +86,9 @@ def lineNotifyMessage(token, msg):
 
 
 # initialize object
-b_obj = Binance(api_key='MYgUFxFMjeVglbzUsips2x38QR11XNJQ5NuYVbov3QBITOcyYmnBGA3MtuHTegWY',
-                api_secret='tOfsgUFcmjb1odifv2F1z4gYjl8Fvbzr5xjbQmiMbNSZnADjRcpCuToHp1H0R2x7')
-token = "G68BgzaWHmFGUJUm4VAnyHS1w3oRFu2n1fgBiCqkTHE"
+b_obj = Binance(api_key='YOUR_BINANCE_API_KEY',
+                api_secret='YOUR_BINANCE_API_SECRET')
+token = "YOUR_PUSHOVER_USER_TOKEN"
 
 sbl_lst = ["BTCUSDT", "ETHUSDT", "SOLUSDT"]
 retry_counter = 0
@@ -118,4 +118,5 @@ while retry_counter < 5:
         print("Connection Failed due to socket - {}").format(error)
         print("Attempting {} of 5").format(retry_counter)
         time.sleep(3)
+
         retry_counter += 1
